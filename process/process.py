@@ -37,7 +37,7 @@ def get_link_and_login() -> str:
     print('jwt = {}'.format(jwt_token))
     print('ws_link = {}'.format(data_dict['websocket_link']))
 
-    with open("temp.txt", "w") as file:
+    with open("auth.txt", "w") as file:
         file.write(jwt_token)
     return jwt_token
 

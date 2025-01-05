@@ -10,14 +10,14 @@ if __name__ == '__main__':
     dummy.set_env(env_data)
     game.set_env(env_data)
 
-    with open("temp.txt", "r") as file:
+    with open("auth.txt", "r") as file:
         # Read the entire content of the file
         token = file.read()
     if token == '':
         token = process.get_link_and_login()
 
     # run process
-    # process.run_all_once(token)
+    process.run_all_once(token)
 
     # params = {
     #     "page": 1,
