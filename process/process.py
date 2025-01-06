@@ -3,8 +3,8 @@ from datetime import datetime
 from urllib.parse import urlparse, parse_qs
 
 from api import dummy, game
-from const import game_code
-from utils import content
+from const import lottery_code
+from lottery_bet_helper import content
 
 _DIVIDER = '---------------------------------------------------------------------------------'
 
@@ -60,17 +60,16 @@ def placing_bets(token: str, game_code: str, bets_count: int):
         bet_content = ""
         prize_multiplier = ""
         if bet_type == "2D" or bet_type == "2D_FRONT" or bet_type == "2D_MIDDLE":
-            bet_content = content.generator_1(2)
+            bet_content = content.four_three_two_d(2)
             prize_multiplier = "95"
         elif bet_type == "3D":
-            bet_content = content.generator_1(3)
+            bet_content = content.four_three_two_d(3)
             prize_multiplier = "950"
         elif bet_type == "4D":
-            bet_content = content.generator_1(4)
+            bet_content = content.four_three_two_d(4)
             prize_multiplier = "9500"
 
         item = {
-            "game_type": "LOTTERY",
             "game_code": game_code,
             "bet_type": "4D_3D_2D",
             "bet_option": bet_type,

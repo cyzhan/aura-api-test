@@ -80,7 +80,7 @@ def get_lottery_bet_limit(token: str, game_code: str) -> dict:
 
 
 def get_lottery_get_properties(token: str, params=None) -> dict:
-    from const import game_code
+    from const import lottery_code
     if params is None:
         params = {
             "game_code": game_code.TGL_MIN_5,

@@ -2,7 +2,7 @@ import time
 
 from dotenv import dotenv_values
 from api import dummy, game
-from const import game_code
+from const import lottery_code
 from process import process
 
 if __name__ == '__main__':
