@@ -83,7 +83,7 @@ def get_lottery_get_properties(token: str, params=None) -> dict:
     from const import lottery_code
     if params is None:
         params = {
-            "game_code": game_code.TGL_MIN_5,
+            "game_code": lottery_code.TGL_MIN_5,
         }
 
     path = _LOTTERY_PROPERTIES + "?"

@@ -4,7 +4,7 @@ from urllib.parse import urlparse, parse_qs
 
 from api import dummy, game
 from const import lottery_code
-from lottery_bet_helper import content
+from lottery_bet_helper import content, tgl
 
 _DIVIDER = '---------------------------------------------------------------------------------'
 
@@ -49,39 +49,41 @@ def placing_bets(token: str, game_code: str, bets_count: int):
     now_timestamp = int(time.time())
     if next_draw_time - now_timestamp < 30:
         date_time = datetime.fromtimestamp(next_draw_time).strftime("%Y-%m-%d %H:%M:%S")
-        print('invalid bet time. Next draw_time = {}', date_time)
+        print(f"invalid bet time. Next draw_time = {date_time}")
         return
 
-    bet_types = ["2D", "2D_FRONT", "2D_MIDDLE", "3D", "4D"]
-    payload = []
-    for i in range(bets_count):
-        j = (i + now_timestamp) % 5
-        bet_type = bet_types[j]
-        bet_content = ""
-        prize_multiplier = ""
-        if bet_type == "2D" or bet_type == "2D_FRONT" or bet_type == "2D_MIDDLE":
-            bet_content = content.four_three_two_d(2)
-            prize_multiplier = "95"
-        elif bet_type == "3D":
-            bet_content = content.four_three_two_d(3)
-            prize_multiplier = "950"
-        elif bet_type == "4D":
-            bet_content = content.four_three_two_d(4)
-            prize_multiplier = "9500"
+    payload = tgl.generate_randon_bets(bets_count=bets_count, period=next_period)
 
-        item = {
-            "game_code": game_code,
-            "bet_type": "4D_3D_2D",
-            "bet_option": bet_type,
-            "bet_content": bet_content,
-            "period": str(next_period),
-            "stake_amount": "1000.000",
-            "discount_percent": "0.00",
-            "bet_amount": "1000.000",
-            "prize_multiplier": prize_multiplier
-        }
-        print('bet_option:{}, bet_content:{}'.format(bet_type, bet_content))
-        payload.append(item)
+    # bet_types = ["2D", "2D_FRONT", "2D_MIDDLE", "3D", "4D"]
+    # payload = []
+    # for i in range(bets_count):
+    #     j = (i + now_timestamp) % 5
+    #     bet_type = bet_types[j]
+    #     bet_content = ""
+    #     prize_multiplier = ""
+    #     if bet_type == "2D" or bet_type == "2D_FRONT" or bet_type == "2D_MIDDLE":
+    #         bet_content = content.four_three_two_d(2)
+    #         prize_multiplier = "95"
+    #     elif bet_type == "3D":
+    #         bet_content = content.four_three_two_d(3)
+    #         prize_multiplier = "950"
+    #     elif bet_type == "4D":
+    #         bet_content = content.four_three_two_d(4)
+    #         prize_multiplier = "9500"
+    #
+    #     item = {
+    #         "game_code": game_code,
+    #         "bet_type": "4D_3D_2D",
+    #         "bet_option": bet_type,
+    #         "bet_content": bet_content,
+    #         "period": str(next_period),
+    #         "stake_amount": "1000.000",
+    #         "discount_percent": "0.00",
+    #         "bet_amount": "1000.000",
+    #         "prize_multiplier": prize_multiplier
+    #     }
+    #     print('bet_option:{}, bet_content:{}'.format(bet_type, bet_content))
+    #     payload.append(item)
 
     game.placing_bets(token=token, body=payload)
 
@@ -89,15 +91,15 @@ def placing_bets(token: str, game_code: str, bets_count: int):
 def run_all_once(token: str):
     game.get_balance(token=token)
     print(_DIVIDER)
-    game.get_lottery_game_setting(token=token, game_code=game_code.TGL_MIN_5)
+    game.get_lottery_game_setting(token=token, game_code=lottery_code.TGL_MIN_5)
     print(_DIVIDER)
-    game.get_lottery_bet_limit(token=token, game_code=game_code.TGL_MIN_5)
+    game.get_lottery_bet_limit(token=token, game_code=lottery_code.TGL_MIN_5)
     print(_DIVIDER)
     game.get_lottery_get_properties(token=token)
     print(_DIVIDER)
-    game.get_lottery_game_current_info(token=token, game_code=game_code.TGL_MIN_5)
+    game.get_lottery_game_current_info(token=token, game_code=lottery_code.TGL_MIN_5)
     print(_DIVIDER)
-    game.lottery_get_game_history(token=token, game_code=game_code.TGL_MIN_5)
+    game.lottery_get_game_history(token=token, game_code=lottery_code.TGL_MIN_5)
     print(_DIVIDER)
     game.lottery_get_bet_history(token=token)
 

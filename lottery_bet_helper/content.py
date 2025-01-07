@@ -1,6 +1,8 @@
 import random
 
 
+colok_jitu_options = ["AS", "KOP", "KEPALA", "EKOR"]
+
 def four_three_two_d(num: int) -> str:
     """
     Converts a number between 1 and 5 to a specific string pattern.
@@ -49,4 +51,5 @@ def colok(bet_option: str) -> str:
                 return f"{d1},{d2},{d3}"
     elif bet_option == "COLOK_JITU":
         d = random.randint(0, 9)
+        return  f"{d},{colok_jitu_options[random.randint(0,3)]}"
 

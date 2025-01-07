@@ -17,7 +17,7 @@ if __name__ == '__main__':
         token = process.get_link_and_login()
 
     # run process
-    process.run_all_once(token)
+    # process.run_all_once(token)
 
     # params = {
     #     "page": 1,
@@ -27,6 +27,6 @@ if __name__ == '__main__':
     # }
     # game.get_drawing_numbers(token=token, game_code=game_code.TGL_MIN_5, params=params)
 
-    process.placing_bets(token=token, game_code=game_code.TGL_MIN_5, bets_count=20)
+    process.placing_bets(token=token, game_code=lottery_code.TGL_MIN_5, bets_count=20)
 
 
