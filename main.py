@@ -1,9 +1,10 @@
-import time
+import json
 
 from dotenv import dotenv_values
 from api import dummy, game
-from const import lottery_code
+from const.lottery_code import LotteryCode
 from process import process
+
 
 if __name__ == '__main__':
     env_data = dotenv_values(".env.dev")
@@ -27,6 +28,8 @@ if __name__ == '__main__':
     # }
     # game.get_drawing_numbers(token=token, game_code=game_code.TGL_MIN_5, params=params)
 
-    process.placing_bets(token=token, game_code=lottery_code.TGL_MIN_5, bets_count=20)
+    process.placing_bets(token=token, game_code=LotteryCode.TGL_MIN_5.value, bets_count=20)
+
+
 
 

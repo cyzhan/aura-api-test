@@ -3,6 +3,7 @@ import time
 
 import requests
 
+from const.lottery_code import LotteryCode
 
 _POST = 'POST'
 _GET = 'GET'
@@ -83,7 +84,7 @@ def get_lottery_get_properties(token: str, params=None) -> dict:
     from const import lottery_code
     if params is None:
         params = {
-            "game_code": lottery_code.TGL_MIN_5,
+            "game_code": LotteryCode.TGL_MIN_5.value,
         }
 
     path = _LOTTERY_PROPERTIES + "?"

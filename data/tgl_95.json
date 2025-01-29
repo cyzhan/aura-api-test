@@ -1,0 +1,163 @@
+[
+	{
+		"bet_type" : "4D_3D_2D",
+		"bet_option" : "2D",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "95"
+	},
+	{
+		"bet_type" : "4D_3D_2D",
+		"bet_option" : "2D_FRONT",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "95"
+	},
+	{
+		"bet_type" : "4D_3D_2D",
+		"bet_option" : "2D_MIDDLE",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "95"
+	},
+	{
+		"bet_type" : "4D_3D_2D",
+		"bet_option" : "3D",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "950"
+	},
+	{
+		"bet_type" : "4D_3D_2D",
+		"bet_option" : "4D",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "9500"
+	},
+	{
+		"bet_type" : "COLOK",
+		"bet_option" : "COLOK_BEBAS",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "1.5"
+	},
+	{
+		"bet_type" : "COLOK",
+		"bet_option" : "COLOK_MACAU",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "7,14,35"
+	},
+	{
+		"bet_type" : "COLOK",
+		"bet_option" : "COLOK_NAGA",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "35,95"
+	},
+	{
+		"bet_type" : "COLOK",
+		"bet_option" : "COLOK_JITU",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "8.5"
+	},
+	{
+		"bet_type" : "50_50",
+		"bet_option" : "50_50_GENERAL",
+		"discount" : null,
+		"kei" : "0.015",
+		"prize_multiplier" : "0.95"
+	},
+	{
+		"bet_type" : "50_50",
+		"bet_option" : "50_50_SPECIAL",
+		"discount" : null,
+		"kei" : "0.020",
+		"prize_multiplier" : "0.95"
+	},
+	{
+		"bet_type" : "50_50",
+		"bet_option" : "50_50_COMBI_MONO",
+		"discount" : null,
+		"kei" : "0.015",
+		"prize_multiplier" : "0.95"
+	},
+	{
+		"bet_type" : "50_50",
+		"bet_option" : "50_50_COMBI_STEREO",
+		"discount" : null,
+		"kei" : "0.015",
+		"prize_multiplier" : "0.95"
+	},
+	{
+		"bet_type" : "50_50",
+		"bet_option" : "50_50_COMBI_INFLATE",
+		"discount" : null,
+		"kei" : "0.015",
+		"prize_multiplier" : "1.15"
+	},
+	{
+		"bet_type" : "50_50",
+		"bet_option" : "50_50_COMBI_DEFLATE",
+		"discount" : null,
+		"kei" : "0.015",
+		"prize_multiplier" : "1.15"
+	},
+	{
+		"bet_type" : "50_50",
+		"bet_option" : "50_50_COMBI_TWIN",
+		"discount" : null,
+		"kei" : "0.00",
+		"prize_multiplier" : "8.5"
+	},
+	{
+		"bet_type" : "OTHERS",
+		"bet_option" : "MACAU_COMBI",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "2.8"
+	},
+	{
+		"bet_type" : "OTHERS",
+		"bet_option" : "SUM_2D_ODD",
+		"discount" : null,
+		"kei" : "0.00",
+		"prize_multiplier" : "0.75"
+	},
+	{
+		"bet_type" : "OTHERS",
+		"bet_option" : "SUM_2D_EVEN",
+		"discount" : null,
+		"kei" : "0.00",
+		"prize_multiplier" : "1.1"
+	},
+	{
+		"bet_type" : "OTHERS",
+		"bet_option" : "SUM_2D_BIG",
+		"discount" : null,
+		"kei" : "0.00",
+		"prize_multiplier" : "0.75"
+	},
+	{
+		"bet_type" : "OTHERS",
+		"bet_option" : "SUM_2D_SMALL",
+		"discount" : null,
+		"kei" : "0.00",
+		"prize_multiplier" : "1.1"
+	},
+	{
+		"bet_type" : "OTHERS",
+		"bet_option" : "ZODIAC_ZH_A",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "9.5"
+	},
+	{
+		"bet_type" : "OTHERS",
+		"bet_option" : "ZODIAC_ZH_B",
+		"discount" : "0.00",
+		"kei" : null,
+		"prize_multiplier" : "11"
+	}
+]
