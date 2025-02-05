@@ -59,6 +59,8 @@ class ContentHelper:
         self.__others_macau_combi_options_1 = ["FRONT", "MID", "END"]
         self.__others_macau_combi_options_2 = ["BIG", "SMALL"]
         self.__others_macau_combi_options_3 = ["ODD", "EVEN"]
+        self.__others_zodiac_zh_a = ["DRAGON","RABBIT","TIGER","OX"]
+        self.__others_zodiac_zh_b = ["RAT","PIG","ROOSTER","MONKEY","GOAT","HORSE","SNAKE"]
 
     def four_three_two_d(self, bet_option: str):
         if bet_option == "4D":
@@ -114,9 +116,9 @@ class ContentHelper:
         elif bet_option == "SUM_2D_BIG":
             return "BIG"
         elif bet_option == "ZODIAC_ZH_A":
-            return "DRAGON|RABBIT|TIGER|OX"
+            return self.__others_zodiac_zh_a[random.randint(0,3)]
         elif bet_option == "ZODIAC_ZH_B":
-            return "RAT|PIG|ROOSTER|MONKEY|GOAT|HORSE|SNAKE"
+            return self.__others_zodiac_zh_b[random.randint(0,7)]
 
 class BetSetting:
     def __init__(self, kei: str, discount: str, prize_multiplier: str):
